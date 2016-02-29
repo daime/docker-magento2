@@ -15,6 +15,7 @@ COMMANDS=(
         --db-host=${MYSQL_HOST}
         --db-name=${MYSQL_DATABASE}
         --db-user=${MYSQL_USER}
+        --db-password=${MYSQL_PASSWORD}
         --base-url=http://${MAGENTO_HOST}/
         --language=en_US
         --timezone=America/Sao_Paulo
