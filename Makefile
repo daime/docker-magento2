@@ -1,3 +1,5 @@
+EDITOR ?= vim
+
 all: build up
 
 build:
@@ -13,8 +15,10 @@ clone:
 	git clone git@github.com:magento/magento2.git
 
 setup:
-	cp template/composer-auth.json data/.composer/auth.json
-	vim data/.composer/auth.json
+	@if [ ! -f "data/.composer/auth.json" ]; then \
+	  cp template/composer-auth.json data/.composer/auth.json; \
+	fi
+	${EDITOR} data/.composer/auth.json
 
 composer-install:
 	docker exec -it dockermagento2_app_1 bash /opt/script/composer.sh install
