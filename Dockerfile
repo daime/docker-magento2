@@ -7,6 +7,7 @@ RUN echo deb http://ppa.launchpad.net/ondrej/php5-5.6/ubuntu trusty main >> \
 # dependencies
 RUN apt-get -y update && \
     apt-get -y install --force-yes \
+        git \
         curl \
         mysql-client \
         nginx \
