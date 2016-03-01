@@ -32,7 +32,7 @@ ADD etc/nginx.conf/magento.conf /etc/nginx/conf/magento.conf
 ADD etc/nginx.conf/default.conf /etc/nginx/conf.d/default.conf
 
 # php
-ADD etc/php.conf/php.ini /etc/php.ini
+ADD etc/php.conf/php.ini /etc/php5/fpm/php.ini
 
 # php fpm
 ADD etc/php-fpm.conf/www.conf /etc/php5/fpm/pool.d/www.conf
