@@ -1,12 +1,13 @@
 EDITOR ?= vim
+DEV_USER_ID=$(shell id -u)
 
 all: build up
 
 build:
-	docker-compose build
+	DEV_USER_ID=${DEV_USER_ID} docker-compose build
 
 up:
-	docker-compose up
+	DEV_USER_ID=${DEV_USER_ID} docker-compose up
 
 rm:
 	docker-compose rm
